@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Sifat | Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#050810',
+                        darkCard: '#0f172a',
+                        neonBlue: '#00f3ff',
+                        neonBlueDim: 'rgba(0, 243, 255, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050810;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* Neon Text and Border Effects */
+        .neon-text {
+            text-shadow: 0 0 10px #00f3ff, 0 0 20px rgba(0, 243, 255, 0.5);
+        }
+        
+        .neon-border-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .neon-border-hover:hover {
+            border-color: #00f3ff;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4), inset 0 0 10px rgba(0, 243, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .neon-btn {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+        }
+        
+        .neon-btn:hover {
+            box-shadow: 0 0 20px #00f3ff;
+            text-shadow: 0 0 5px #fff;
+        }
+
+        /* Background Grid Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050810;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00f3ff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-grid antialiased selection:bg-neonBlue selection:text-darkBg">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 bg-darkBg/80 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="text-2xl font-bold tracking-tighter text-white">
+                        Sifat<span class="text-neonBlue">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-neonBlue transition-colors text-sm font-medium uppercase tracking-wider">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-neonBlue transition-colors text-sm font-medium uppercase tracking-wider">About</a>
+                    <a href="#skills" class="text-gray-300 hover:text-neonBlue transition-colors text-sm font-medium uppercase tracking-wider">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-neonBlue transition-colors text-sm font-medium uppercase tracking-wider">Projects</a>
+                    <a href="#experience" class="text-gray-300 hover:text-neonBlue transition-colors text-sm font-medium uppercase tracking-wider">Experience</a>
+                    <a href="#designs" class="text-gray-300 hover:text-neonBlue transition-colors text-sm font-medium uppercase tracking-wider">Designs</a>
+                </div>
+                <!-- Mobile menu button placeholder -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <!-- Decorative glowing orb -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neonBlue/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 fade-in">
+            <p class="text-neonBlue font-medium tracking-widest uppercase mb-4">Hello, I am</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+                Mohammad <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-blue-500 neon-text">Sifat</span>
+            </h1>
+            <h2 class="text-xl md:text-2xl text-gray-400 font-light mb-8 max-w-3xl mx-auto">
+                STEM Researcher | Robotics Engineer | Graphic Designer | WEB & APP Developer | Guiterist
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
+                Pioneering the future of autonomous systems and bringing imaginative designs to life through hardware and code.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="neon-btn px-8 py-3 rounded-full bg-transparent border border-neonBlue text-neonBlue font-semibold hover:bg-neonBlue hover:text-darkBg">
+                    View My Work
+                </a>
+                <a href="#contact" class="px-8 py-3 rounded-full bg-gray-800 text-white font-semibold hover:bg-gray-700 transition-colors border border-gray-700">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-darkCard/30 border-y border-gray-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12 fade-in">
+                <div class="md:w-1/2">
+                    <div class="relative w-full aspect-square max-w-md mx-auto rounded-2xl border border-gray-700 overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-neonBlue/20 to-transparent z-10 group-hover:opacity-0 transition-opacity duration-500"></div>
+                        <!-- Placeholder for Profile Image -->
+                        <img src="819580432_1480192113918837_9092035418709443823_n.jpg" alt="Mohammad Sifat" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About <span class="text-neonBlue">Me</span></h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                         I am Sifat, currently studying in 12th grade at Birshreshtha Munshi Abdur Rouf Public College. As an HSC 2027 science student, I am driven by a profound passion for IT, robotics, STEM, graphic design, and film.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                        I thrive on translating theoretical concepts into practical innovation. My technical background includes leading impactful STEM engagement initiatives and engineering diverse systems, ranging from underwater robotics and autonomous cars to drones, aircraft, artificial intelligence, and rovers. Additionally, operating as a dedicated visualist, I have collaborated with numerous brands and music bands to conceptualize and craft compelling visual designs.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-darkBg p-4 rounded-lg border border-gray-800 border-l-2 border-l-neonBlue">
+                            <h4 class="text-white font-bold text-xl mb-1">HSC 2027</h4>
+                            <p class="text-gray-400 text-sm">Subject : Science</p>
+                        </div>
+                        <div class="bg-darkBg p-4 rounded-lg border border-gray-800 border-l-2 border-l-neonBlue">
+                            <h4 class="text-white font-bold text-xl mb-1">Robotics</h4>
+                            <p class="text-gray-400 text-sm">Hardware & CAD</p>
+                        </div>
+                        <div class="bg-darkBg p-4 rounded-lg border border-gray-800 border-l-2 border-l-neonBlue">
+                            <h4 class="text-white font-bold text-xl mb-1">Graphic Design</h4>
+                            <p class="text-gray-400 text-sm">Photosop, Illustrator, Figma, Canva</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Technical <span class="text-neonBlue">Arsenal</span></h2>
+                <div class="w-20 h-1 bg-neonBlue mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-darkCard p-8 rounded-2xl border border-gray-800 neon-border-hover fade-in">
+                    <div class="w-14 h-14 bg-neonBlue/10 rounded-lg flex items-center justify-center mb-6 border border-neonBlue/30">
+                        <i class="fas fa-code text-2xl text-neonBlue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-6">Programming</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> C++ & Python</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> HTML5 & CSS3</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> JavaScript</li>
+                    </ul>
+                </div>
+
+                <!-- Robotics & Hardware -->
+                <div class="bg-darkCard p-8 rounded-2xl border border-gray-800 neon-border-hover fade-in" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-neonBlue/10 rounded-lg flex items-center justify-center mb-6 border border-neonBlue/30">
+                        <i class="fas fa-robot text-2xl text-neonBlue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-6">Robotics</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> AUV & ASV Dev</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> AI & Computer Vision</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> Embedded Systems</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> CAD Modeling</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> Cross-Domain System Integration</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> 3D Printing </li>
+                    </ul>
+                </div>
+
+                <!-- Design -->
+                <div class="bg-darkCard p-8 rounded-2xl border border-gray-800 neon-border-hover fade-in" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-neonBlue/10 rounded-lg flex items-center justify-center mb-6 border border-neonBlue/30">
+                        <i class="fas fa-paint-brush text-2xl text-neonBlue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-6">Creative Design</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> Adobe Photoshop</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> Adobe Illustrator</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> Figma</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> Canva</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-neonBlue mr-3 text-sm"></i> UI / UX Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects / Achievements -->
+    <section id="projects" class="py-24 bg-darkCard/30 border-y border-gray-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured <span class="text-neonBlue">Competition, Project & Achievement</span></h2>
+                <div class="w-20 h-1 bg-neonBlue mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24">
+                
+                <!-- Item 1: WICE 2026 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group fade-in flex flex-col">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden shrink-0">
+                        <img src="photo - 1.png" alt="DepthGuard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-water text-4xl text-neonBlue"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 relative flex flex-col flex-grow">
+                        <div class="absolute -top-6 right-6 bg-neonBlue text-darkBg text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                            <span class="text-base leading-none">🇲🇾</span> Malaysia
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">DepthGuard AUV</h3>
+                        <p class="text-neonBlue text-sm mb-4">World Invention Competition & Exhibition (WICE) 2026</p>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Won Gold Medal in IT & Robotics. Secured $10,000 USD funding. Engineered a dual-vehicle cross-domain autonomous system featuring 6-DoF maneuverability, LIDAR navigation, and zero-visibility AI vision.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team Obsidian Prime</span>
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Lead</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: WRO 2026 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group fade-in flex flex-col" style="transition-delay: 100ms;">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden shrink-0">
+                        <img src="photo - 2.png" alt="DoB McQueen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-car text-4xl text-neonBlue"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 relative flex flex-col flex-grow">
+                        <div class="absolute -top-6 right-6 bg-neonBlue text-darkBg text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                            <span class="text-base leading-none">🇵🇷</span> Puerto Rico
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">DoB McQueen</h3>
+                        <p class="text-neonBlue text-sm mb-4">World Robot Olympiad (WRO) 2026</p>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Shortlisted to represent Bangladesh at WRO International Final. Engineered a fully autonomous, vision-based robot car with Raspberry Pi, precision steering, and LIDAR sensors.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team DoB McQueen</span>
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Lead, Hardware & CAD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: RoboBoat 2026 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group fade-in flex flex-col" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden shrink-0">
+                        <img src="photo - 3.png" alt="DoB JolJan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-ship text-4xl text-neonBlue"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 relative flex flex-col flex-grow">
+                        <div class="absolute -top-6 right-6 bg-neonBlue text-darkBg text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                            <span class="text-base leading-none">🇺🇸</span> USA
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">DoB JolJan ASV</h3>
+                        <p class="text-neonBlue text-sm mb-4">RoboBoat 2026</p>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Represented Bangladesh at RoboBoat in Florida, USA. Developed autonomous surface navigation algorithms, sensor fusion logic, and maintained comprehensive technical documentation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team DoB JolJan</span>
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Visual Lead & Hardware Member</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: RoboSub 2025 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group fade-in flex flex-col">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden shrink-0">
+                        <img src="photo - 4.png" alt="DoB HydroJan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-water text-4xl text-neonBlue"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 relative flex flex-col flex-grow">
+                        <div class="absolute -top-6 right-6 bg-neonBlue text-darkBg text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                            <span class="text-base leading-none">🇺🇸</span> USA
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">DoB HydroJan AUV</h3>
+                        <p class="text-neonBlue text-sm mb-4">RoboSub 2025</p>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Represented Bangladesh at RoboSub in Florida, USA. Contributed to advanced marine engineering design, 3D CAD modeling, waterproof housing, and multi-thruster underwater propulsion.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team DoB HydroJan</span>
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Visual Lead & Hardware Member</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: NASA Space Apps -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group fade-in flex flex-col" style="transition-delay: 100ms;">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden shrink-0">
+                        <img src="photo - 5.png" alt="BASELINE" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-rocket text-4xl text-neonBlue"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 relative flex flex-col flex-grow">
+                        <div class="absolute -top-6 right-6 bg-neonBlue text-darkBg text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                            <span class="text-base leading-none">🇺🇸</span> USA
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">BASELINE</h3>
+                        <p class="text-neonBlue text-sm mb-4">NASA Space Apps Challenge2026</p>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Selected for Local Event stage. Led end-to-end execution, UI/UX design, and integration of open NASA data for a space health & biometric monitoring application.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team Obsidian Prime</span>
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team Lead</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: IIT Bombay Techfest -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group fade-in flex flex-col" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden shrink-0">
+                        <img src="photo - 6.png" alt="DepthGuard II" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-trophy text-4xl text-neonBlue"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 relative flex flex-col flex-grow">
+                        <div class="absolute -top-6 right-6 bg-neonBlue text-darkBg text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                            <span class="text-base leading-none">🇮🇳</span> India
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">DepthGuard II</h3>
+                        <p class="text-neonBlue text-sm mb-4">IIT Bombay Techfest 2026</p>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Winner of Bangladesh Zonal Round. Led development of an advanced underwater robotics system to map plastic pollution source-to-destination pathways for cleanup.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team Obsidian Prime</span>
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team Lead</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7: Innovation World Cup -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group fade-in flex flex-col">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden shrink-0">
+                        <img src="photo - 7.png" alt="Hexaguard AI Rover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-shield-alt text-4xl text-neonBlue"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 relative flex flex-col flex-grow">
+                        <div class="absolute -top-6 right-6 bg-neonBlue text-darkBg text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                            <span class="text-base leading-none">🇮🇩</span> Indonesia
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Hexaguard AI Rover</h3>
+                        <p class="text-neonBlue text-sm mb-4">Innovation World Cup 2026</p>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Won Gold Medal in Jakarta, Indonesia. Contributed to the development and validation of advanced autonomous defense and search-and-rescue rover technology.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team Phantom Forge</span>
+                            <span class="px-3 py-1 bg-gray-800 text-xs rounded-full text-gray-300">Team Member</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ================= TIMELINE EVENT GALLERY ================= -->
+            <div class="max-w-5xl mx-auto relative mt-16">
+                <div class="text-center mb-16 fade-in">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Competition <span class="text-neonBlue">Highlights & Gallery</span></h3>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Memorable moments and highlights from international competitions.</p>
+                </div>
+
+                <!-- Vertical Line (Visible on larger screens) -->
+                <div class="hidden sm:block absolute right-[10%] top-32 bottom-0 w-1 bg-gray-800 z-0 rounded-full"></div>
+
+                <!-- Gallery Point 1: Malaysia -->
+                <div class="relative flex flex-col sm:flex-row items-center justify-between mb-20 fade-in z-10">
+                    <div class="w-full sm:w-[85%] sm:pr-12 mb-6 sm:mb-0">
+                        <div class="bg-darkCard p-6 rounded-2xl border border-gray-800 neon-border-hover">
+                            <h4 class="text-2xl font-bold text-white mb-2">World Invention Competition & Exhibition (WICE) 2026</h4>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed">Proudly secured a Gold Medal at WICE 2026 in Malaysia for our innovative robotics project.
+                                
+                            </p> 
+                            
+                            <!-- 3 Images Grid (1 Large Vertical, 2 Smaller Landscape) -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <!-- Large Vertical Image (Combines space of 1 and 3) -->
+                                <img src="823382033_1481079767163405_5489910158329303283_n.jpg" alt="Gallery Photo 1" class="w-full h-full object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors sm:row-span-2 min-h-[250px]">
+                                <!-- Top Right Image (Image 2) -->
+                                <img src="b1.png" alt="Gallery Photo 2" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                                <!-- Bottom Right Image (Image 4) -->
+                                <img src="b2.png" alt="Gallery Photo 3" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block absolute right-[10%] translate-x-[2px] w-5 h-5 rounded-full bg-neonBlue shadow-[0_0_15px_#00f3ff] border-4 border-darkBg z-20"></div>
+                    <div class="w-full sm:w-[15%] flex flex-col items-center justify-center">
+                        <span class="text-5xl mb-2">🇲🇾</span>
+                        <span class="text-neonBlue font-bold text-sm uppercase tracking-wider text-center">Malaysia</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Point 2: Puerto Rico -->
+                <div class="relative flex flex-col sm:flex-row items-center justify-between mb-20 fade-in z-10">
+                    <div class="w-full sm:w-[85%] sm:pr-12 mb-6 sm:mb-0">
+                        <div class="bg-darkCard p-6 rounded-2xl border border-gray-800 neon-border-hover">
+                            <h4 class="text-2xl font-bold text-white mb-2">World Robot Olympiad (WRO) 2026</h4>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed"> Shortlisted from the Bangladesh National Round and selected for the International Round in Puerto Rico.
+                                
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <img src="photo - 2.png" alt="Gallery Photo 1" class="w-full h-full object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors sm:row-span-2 min-h-[250px]">
+                                <img src="IMG_5610.JPG" alt="Gallery Photo 2" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                                <img src="IMG_5609.JPG" alt="Gallery Photo 3" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block absolute right-[10%] translate-x-[2px] w-5 h-5 rounded-full bg-neonBlue shadow-[0_0_15px_#00f3ff] border-4 border-darkBg z-20"></div>
+                    <div class="w-full sm:w-[15%] flex flex-col items-center justify-center">
+                        <span class="text-5xl mb-2">🇵🇷</span>
+                        <span class="text-neonBlue font-bold text-sm uppercase tracking-wider text-center">Puerto Rico</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Point 3: USA 1 -->
+                <div class="relative flex flex-col sm:flex-row items-center justify-between mb-20 fade-in z-10">
+                    <div class="w-full sm:w-[85%] sm:pr-12 mb-6 sm:mb-0">
+                        <div class="bg-darkCard p-6 rounded-2xl border border-gray-800 neon-border-hover">
+                            <h4 class="text-2xl font-bold text-white mb-2">RoboBoat 2026</h4>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                                Global Qualifier at RoboBoat 2026 and successfully participated in the Final Round.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <img src="DSC09094.jpg" alt="Gallery Photo 1" class="w-full h-full object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors sm:row-span-2 min-h-[250px]">
+                                <img src="618106952_1283295560275161_2249439927236989777_n.jpg" alt="Gallery Photo 2" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                                <img src="DSC09034.JPEG" alt="Gallery Photo 3" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block absolute right-[10%] translate-x-[2px] w-5 h-5 rounded-full bg-neonBlue shadow-[0_0_15px_#00f3ff] border-4 border-darkBg z-20"></div>
+                    <div class="w-full sm:w-[15%] flex flex-col items-center justify-center">
+                        <span class="text-5xl mb-2">🇺🇸</span>
+                        <span class="text-neonBlue font-bold text-sm uppercase tracking-wider text-center">USA</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Point 4: USA 2 -->
+                <div class="relative flex flex-col sm:flex-row items-center justify-between mb-20 fade-in z-10">
+                    <div class="w-full sm:w-[85%] sm:pr-12 mb-6 sm:mb-0">
+                        <div class="bg-darkCard p-6 rounded-2xl border border-gray-800 neon-border-hover">
+                            <h4 class="text-2xl font-bold text-white mb-2">RoboSub 2025</h4>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                                Global Qualifier at RoboSub 2025 and successfully participated in the Final Round.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <img src="hydrol.jpg" alt="Gallery Photo 1" class="w-full h-full object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors sm:row-span-2 min-h-[250px]">
+                                <img src="hydro.jpg" alt="Gallery Photo 2" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                                <img src="hydroa.jpg" alt="Gallery Photo 3" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block absolute right-[10%] translate-x-[2px] w-5 h-5 rounded-full bg-neonBlue shadow-[0_0_15px_#00f3ff] border-4 border-darkBg z-20"></div>
+                    <div class="w-full sm:w-[15%] flex flex-col items-center justify-center">
+                        <span class="text-5xl mb-2">🇺🇸</span>
+                        <span class="text-neonBlue font-bold text-sm uppercase tracking-wider text-center">USA</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Point 5: USA 3 -->
+                <div class="relative flex flex-col sm:flex-row items-center justify-between mb-20 fade-in z-10">
+                    <div class="w-full sm:w-[85%] sm:pr-12 mb-6 sm:mb-0">
+                        <div class="bg-darkCard p-6 rounded-2xl border border-gray-800 neon-border-hover">
+                            <h4 class="text-2xl font-bold text-white mb-2">NASA Space Apps 2026</h4>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                                Officially qualified for the local event.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <img src="IMG_0742.jpg" alt="Gallery Photo 1" class="w-full h-full object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors sm:row-span-2 min-h-[250px]">
+                                <img src="photo - 5.png" alt="Gallery Photo 2" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                                <img src="nasa.jpg" alt="Gallery Photo 3" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block absolute right-[10%] translate-x-[2px] w-5 h-5 rounded-full bg-neonBlue shadow-[0_0_15px_#00f3ff] border-4 border-darkBg z-20"></div>
+                    <div class="w-full sm:w-[15%] flex flex-col items-center justify-center">
+                        <span class="text-5xl mb-2">🇺🇸</span>
+                        <span class="text-neonBlue font-bold text-sm uppercase tracking-wider text-center">USA</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Point 6: India -->
+                <div class="relative flex flex-col sm:flex-row items-center justify-between mb-20 fade-in z-10">
+                    <div class="w-full sm:w-[85%] sm:pr-12 mb-6 sm:mb-0">
+                        <div class="bg-darkCard p-6 rounded-2xl border border-gray-800 neon-border-hover">
+                            <h4 class="text-2xl font-bold text-white mb-2">IIT Bombay Techfest 2026</h4>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                                Winner at the IIT Techfest Dhaka Zonal Round and selected for the Final Round at IIT Bombay, India.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <img src="IMG_5201.jpg" alt="Gallery Photo 1" class="w-full h-full object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors sm:row-span-2 min-h-[250px]">
+                                <img src="IMG_5204.jpg" alt="Gallery Photo 2" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                                <img src="IMG_5237.jpg" alt="Gallery Photo 3" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block absolute right-[10%] translate-x-[2px] w-5 h-5 rounded-full bg-neonBlue shadow-[0_0_15px_#00f3ff] border-4 border-darkBg z-20"></div>
+                    <div class="w-full sm:w-[15%] flex flex-col items-center justify-center">
+                        <span class="text-5xl mb-2">🇮🇳</span>
+                        <span class="text-neonBlue font-bold text-sm uppercase tracking-wider text-center">India</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Point 7: Indonesia -->
+                <div class="relative flex flex-col sm:flex-row items-center justify-between mb-10 fade-in z-10">
+                    <div class="w-full sm:w-[85%] sm:pr-12 mb-6 sm:mb-0">
+                        <div class="bg-darkCard p-6 rounded-2xl border border-gray-800 neon-border-hover">
+                            <h4 class="text-2xl font-bold text-white mb-2">Innovation World Cup</h4>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                                Innovation World Cup 2026 Moments.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <img src="IMG_5611.jpg" alt="Gallery Photo 1" class="w-full h-full object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors sm:row-span-2 min-h-[250px]">
+                                <img src="IMG_5612.jpg" alt="Gallery Photo 2" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                                <img src="IMG_3052.jpg" alt="Gallery Photo 3" class="w-full aspect-video object-cover rounded-lg border border-gray-700 hover:border-neonBlue transition-colors">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block absolute right-[10%] translate-x-[2px] w-5 h-5 rounded-full bg-neonBlue shadow-[0_0_15px_#00f3ff] border-4 border-darkBg z-20"></div>
+                    <div class="w-full sm:w-[15%] flex flex-col items-center justify-center">
+                        <span class="text-5xl mb-2">🇮🇩</span>
+                        <span class="text-neonBlue font-bold text-sm uppercase tracking-wider text-center">Indonesia</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ================= END TIMELINE EVENT GALLERY ================= -->
+
+        </div>
+    </section>
+
+    <!-- Experience & Leadership -->
+    <section id="experience" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Experience & <span class="text-neonBlue">Leadership</span></h2>
+                <div class="w-20 h-1 bg-neonBlue mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="relative pl-8 sm:pl-0 fade-in">
+                    <div class="hidden sm:block absolute left-[50%] top-0 bottom-0 w-px bg-gray-800 -translate-x-1/2 z-0"></div>
+                    
+                    <!-- Item 1 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 mb-8 sm:mb-12">
+                        <div class="sm:w-[45%] text-left sm:text-right mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">Dreams of Bangladesh</h3>
+                            <p class="text-neonBlue font-medium">Executive Board Member & Core Member</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-neonBlue shadow-[0_0_10px_#00f3ff] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-colors">
+                            <p class="text-gray-400 text-sm">
+                                Core Member of nation's
+ largest robotics org. Won 
+awards in 50+ national & int'l
+ competitions. Taught robotics & 
+mentored thousands of students.
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 flex-row-reverse mb-8 sm:mb-12">
+                        <div class="sm:w-[45%] text-left mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">TEDx Organizer</h3>
+                            <p class="text-neonBlue font-medium">License Holder, Organizer & Executive Creative Director</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-red-500 shadow-[0_0_10px_#ef4444] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-red-500/50 transition-colors text-left sm:text-right">
+                            <p class="text-gray-400 text-sm">
+                                Organizer for 2 tech &
+innovation-focused TEDx 
+events TEDx SHAHEED RAMIZ UDDIN CANT COLLEGE & TEDx BMARPC Youth. Curated speakers,
+ managed logistics & 
+sponsorships, inspiring
+ 1000+ attendees.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 mb-8 sm:mb-12">
+                        <div class="sm:w-[45%] text-left sm:text-right mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">TECHious</h3>
+                            <p class="text-neonBlue font-medium">Visual Director & Core Member</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-neonBlue shadow-[0_0_10px_#00f3ff] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-colors">
+                            <p class="text-gray-400 text-sm">
+                                Organized 20+ tech & robotics
+ workshops, seminars, and events
+ to promote STEM education
+ among students.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 flex-row-reverse mb-8 sm:mb-12">
+                        <div class="sm:w-[45%] text-left mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">Bangladesh Space Research Society</h3>
+                            <p class="text-neonBlue font-medium">Executive - Creative</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-red-500 shadow-[0_0_10px_#ef4444] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-red-500/50 transition-colors text-left sm:text-right">
+                            <p class="text-gray-400 text-sm">
+                                Managed tech infrastructure, 
+digital platforms & curated 
+question banks for a 
+nationwide space
+Space Olympiad of 1500+ participants.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 mb-8 sm:mb-12">
+                        <div class="sm:w-[45%] text-left sm:text-right mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">Homna Government High School Science Club</h3>
+                            <p class="text-neonBlue font-medium">Former President 2024-2025</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-neonBlue shadow-[0_0_10px_#00f3ff] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-colors">
+                            <p class="text-gray-400 text-sm">
+                                Led club to multiple district & 
+national science fest
+ championships. Organized 
+STEM seminars to foster tech
+ innovation among school students.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 flex-row-reverse mb-8 sm:mb-12">
+                        <div class="sm:w-[45%] text-left mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">Orbit Studio</h3>
+                            <p class="text-neonBlue font-medium">Graphic Designer</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-red-500 shadow-[0_0_10px_#ef4444] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-red-500/50 transition-colors text-left sm:text-right">
+                            <p class="text-gray-400 text-sm">
+                                Designed visuals for BD's top 
+music bands, major national
+ concerts, brands & 
+ agencies. Executed high-profile
+ projects, earning 3000+ USD.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 mb-8 sm:mb-12">
+                        <div class="sm:w-[45%] text-left sm:text-right mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">Homna Government High School Scout Unit</h3>
+                            <p class="text-neonBlue font-medium">Senior Petrol Leader - SPL</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-neonBlue shadow-[0_0_10px_#00f3ff] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-colors">
+                            <p class="text-gray-400 text-sm">
+                                Led school scout unit as Senior
+ Patrol Leader. attended 3-7
+ day camps, community service
+ projects & social welfare
+ initiatives to aid locals. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 flex-row-reverse mb-8 sm:mb-12">
+                        <div class="sm:w-[45%] text-left mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">Chintar Chash</h3>
+                            <p class="text-neonBlue font-medium">Young Researcher</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-red-500 shadow-[0_0_10px_#ef4444] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-red-500/50 transition-colors text-left sm:text-right">
+                            <p class="text-gray-400 text-sm">
+                                Selected nationwide as a young
+ researcher for Chintar Chash. 
+Won sole champion for paper 
+presentation at the 7th conference
+ & quiz champion at the 8th.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 mb-8 sm:mb-12">
+                        <div class="sm:w-[45%] text-left sm:text-right mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">Aruddho Ekattor</h3>
+                            <p class="text-neonBlue font-medium">Project Communication Officer</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-neonBlue shadow-[0_0_10px_#00f3ff] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-colors">
+                            <p class="text-gray-400 text-sm">
+                                Proudly associated with Aruddho Ekattor, a prominent organization based in Cumilla, and successfully completed 10+ social initiatives.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="sm:flex items-center justify-between w-full relative z-10 flex-row-reverse">
+                        <div class="sm:w-[45%] text-left mb-4 sm:mb-0">
+                            <h3 class="text-2xl font-bold text-white">Cumilla Rock Carnival</h3>
+                            <p class="text-neonBlue font-medium">Graphic Designer</p>
+                        </div>
+                        <div class="absolute left-0 sm:left-[50%] -translate-x-[4px] sm:-translate-x-1/2 w-4 h-4 rounded-full bg-red-500 shadow-[0_0_10px_#ef4444] border-4 border-darkBg"></div>
+                        <div class="sm:w-[45%] bg-darkCard p-6 rounded-xl border border-gray-800 hover:border-red-500/50 transition-colors text-left sm:text-right">
+                            <p class="text-gray-400 text-sm">
+                                Proudly associated with Cumilla Rock Carnival, a prominent music organization based in Cumilla, and successfully completed 5+ big concert.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Portfolio Section -->
+    <section id="designs" class="py-24 bg-darkCard/30 border-y border-gray-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Creative <span class="text-neonBlue">Design Portfolio</span></h2>
+                <div class="w-20 h-1 bg-neonBlue mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">A showcase of my graphic designs, vector art, logos, and promotional materials.</p>
+            </div>
+
+            <!-- 1. YouthGen Section -->
+            <div class="mb-24 fade-in">
+                <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-neonBlue pl-4">YouthGen</h3>
+                <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+                    <!-- Ticket (Full size spanning all columns) -->
+                    <div class="md:col-span-6 rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-[21/9] sm:aspect-[3/1]">
+                        <img src="y1.PNG" alt="YouthGen Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">YouthGen Ticket</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2 Banners Below Ticket -->
+                    <div class="md:col-span-3 rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-video">
+                        <img src="y2.PNG" alt="YouthGen Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">YouthGen Banner 1</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-video">
+                        <img src="y4.JPEG" alt="YouthGen Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">YouthGen Banner 2</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 Square Posters Below Banners -->
+                    <div class="md:col-span-2 rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="y5.JPEG" alt="YouthGen Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">YouthGen Poster 1</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="y6.JPEG" alt="YouthGen Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">YouthGen Poster 2</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="y7.JPEG" alt="YouthGen Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">YouthGen Poster 3</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Orbit Studio Section -->
+            <div class="mb-24 fade-in">
+                <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-neonBlue pl-4">Orbit Studio</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- 9 Square Grid -->
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="01.PNG" alt="Orbit Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">TECH Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="02.JPEG" alt="Orbit Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">TECH Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="03.JPEG" alt="Orbit Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">TECH Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="04.JPEG" alt="Orbit Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="05.JPEG" alt="Orbit Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Design Title Here</h3>
+                            <p class="text-neonBlue text-sm">Software Used</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="06.JPEG" alt="Orbit Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="07.JPEG" alt="Orbit Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Illustrator</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="08.JPG" alt="Orbit Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Illustrator</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="09.JPG" alt="Orbit Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Illustrator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Dreams Of Bangladesh Section -->
+            <div class="fade-in">
+                <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-neonBlue pl-4">Dreams of Bangladesh</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Row 1: 3 Squares -->
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="d1.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Canva</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="d2.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Canva</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="d3.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Figma</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2: 1 Portrait, 1 Large Landscape -->
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-[3/4] sm:aspect-auto sm:h-full lg:aspect-[3/4]">
+                        <img src="dp.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Illustrator</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-[3/4] sm:aspect-auto sm:h-full lg:aspect-[3/4]">
+                        <img src="dp1.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Illustrator</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-[3/4] sm:aspect-auto sm:h-full lg:aspect-[3/4]">
+                        <img src="dp2.PNG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Poster</h3>
+                            <p class="text-neonBlue text-sm">Software: Adobe Illustrator</p>
+                        </div>
+                    </div>
+                    <!-- lg:col-span-2 এর পরিবর্তে col-span-full ব্যবহার করা হয়েছে এবং w-full যুক্ত করা হয়েছে -->
+<div class="col-span-full w-full rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative h-[300px] md:h-[450px] lg:h-[600px]">
+    <img src="618106952_1283295560275161_2249439927236989777_n.jpg" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+    
+    <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+        <h3 class="text-xl font-bold text-white mb-2">DoB JolJan Team Photo</h3>
+        <p class="text-neonBlue text-sm">Adobe Illustrator</p>
+    </div>
+</div>
+
+                    <!-- Row 3: 3 Squares -->
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="f1.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Poster</h3>
+                            <p class="text-neonBlue text-sm">Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="f2.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Poster</h3>
+                            <p class="text-neonBlue text-sm">Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="f3.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">JolJan LOGO</h3>
+                            <p class="text-neonBlue text-sm">Adobe Illustrator</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: 3 Squares -->
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="f4.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Poster</h3>
+                            <p class="text-neonBlue text-sm">Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="f5.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Poster</h3>
+                            <p class="text-neonBlue text-sm">Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-gray-800 neon-border-hover group relative aspect-square">
+                        <img src="f6.JPG" alt="DoB Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-darkBg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                            <h3 class="text-xl font-bold text-white mb-2">Poster</h3>
+                            <p class="text-neonBlue text-sm">Adobe Photoshop</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkCard py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <a href="#home" class="text-2xl font-bold tracking-tighter text-white inline-block mb-6">
+                Sifat<span class="text-neonBlue">.</span>
+            </a>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full bg-darkBg border border-gray-700 flex items-center justify-center text-gray-400 hover:text-neonBlue hover:border-neonBlue transition-all hover:shadow-[0_0_10px_#00f3ff]">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-darkBg border border-gray-700 flex items-center justify-center text-gray-400 hover:text-neonBlue hover:border-neonBlue transition-all hover:shadow-[0_0_10px_#00f3ff]">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-darkBg border border-gray-700 flex items-center justify-center text-gray-400 hover:text-neonBlue hover:border-neonBlue transition-all hover:shadow-[0_0_10px_#00f3ff]">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-darkBg border border-gray-700 flex items-center justify-center text-gray-400 hover:text-neonBlue hover:border-neonBlue transition-all hover:shadow-[0_0_10px_#00f3ff]">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="year"></span> Mohammad Sifat. All rights reserved.
+            </p>
+            <p class="text-gray-600 text-xs mt-2">
+                Designed & Built with <i class="fas fa-heart text-neonBlue text-xs mx-1"></i> for Robotics & Innovation
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Intersection Observer for scroll animations (fade-in)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Run once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Navbar blur and border on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg', 'shadow-neonBlue/5');
+            } else {
+                nav.classList.remove('shadow-lg', 'shadow-neonBlue/5');
+            }
+        });
+    </script>
+</body>
+</html>
